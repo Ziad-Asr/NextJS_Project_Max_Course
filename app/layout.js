@@ -1,4 +1,5 @@
-import "./globals.css";
+import MainHeader from "@/components/main-header";
+import "./globals.css"; // will be applied on the whole app.
 
 export const metadata = {
   title: "NextLevel Food",
@@ -30,8 +31,12 @@ export default function RootLayout({ children }) {
           </svg>
         </div>
 
+        <MainHeader />
         {children}
       </body>
     </html>
   );
 }
+
+// Any repeated component will be put in the lauout (not page file)
+// since this is the root layout, so any component used here will appear in the whole app.
